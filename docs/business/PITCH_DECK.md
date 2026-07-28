@@ -1,65 +1,67 @@
-# Pitch Deck
+# Pitch Deck (Outline)
+
+**Market:** Japan Garden City, Dhaka, Bangladesh  
+**Currency:** BDT (৳)  
+**Stage:** Pre-pilot — do not present as live traction
 
 ## Slide 1: Title
-**JG Mart** — Grocery, delivered in 90 minutes. WhatsApp-first. Neighborhood-native.
+**JG Mart** — Fresh groceries for Japan Garden City. WhatsApp-first. Neighborhood-native.
 
 ## Slide 2: Problem
-- Grocery shopping is time-consuming and price-inconsistent
+- Grocery runs are time-consuming; availability and price vary
 - Small stores are trusted but undigitized
-- Apps are too heavy; WhatsApp is already installed
+- Residents already live on WhatsApp; they will not install another app for every need
 
 ## Slide 3: Solution
-WhatsApp-native ordering from local stores with 90-minute hyperlocal delivery.
+WhatsApp-native + lightweight web catalog ordering from partner stores inside JGC, with clear morning/evening delivery slots.
 
 ## Slide 4: How It Works
-1. Customer browses catalog on WhatsApp/web
-2. Places order via WhatsApp message
-3. Store packs + rider picks up
-4. Delivered in 90 minutes
-5. Payment: Cash on delivery / UPI
+1. Customer browses catalog (web/PWA) or messages on WhatsApp
+2. Order confirmed
+3. Partner packs; rider picks up
+4. Delivered in the chosen slot
+5. Payment: cash / bKash / Nagad / Rocket (as supported)
 
 ## Slide 5: Market
-- India retail: $900B
-- Neighborhood grocery: $12B
-- Digitization rate: <5%
+- Beachhead: Japan Garden City residential community
+- Expansion: adjacent dense societies in Dhaka **only after** unit economics proven
 
 ## Slide 6: Traction
-- [ ] 5 pilot stores ready
-- [ ] 10 riders trained
-- [ ] Operations playbook finalized
-- [ ] Legal templates drafted
+- [ ] Partner stores live
+- [ ] Real orders measured
+- [ ] Operations playbook in use daily
+- [ ] Legal templates ready
+
+*(Do not claim numbers that are not in the ledger.)*
 
 ## Slide 7: Business Model
-- Delivery fee: ₹30–50
-- Commission: 5–8%
-- Premium subscription: ₹99/month
-- Data insights (Year 2)
+- Delivery fee (e.g. ৳30)
+- Commission from partner stores (~8–11% blended target)
+- Subscription later for heavy users
 
 ## Slide 8: Unit Economics
-- AOV: ₹450
-- Gross profit: ₹24/order (33% margin)
-- Break-even: 2,600 orders/month
+- Target AOV: ~৳800
+- Contribution per order: **measure live**
+- Paper models live in `FINANCIAL_MODEL.md` — replace with actuals ASAP
 
 ## Slide 9: Competition
-| Player | Model | Weakness |
-|--------|-------|----------|
-| Swiggy/Blinkit | App-first | High fees, app fatigue |
-| Local Kirana | Walk-in | No digital access |
-| JG Mart | WhatsApp-first | Zero friction, trusted |
+| Player | Model | Gap |
+|--------|-------|-----|
+| App-first delivery | High marketing, app friction | Overkill for one community |
+| Local store walk-in | Trusted | No digital convenience |
+| JG Mart | WhatsApp + hyperlocal | Focused on one dense community first |
 
 ## Slide 10: Team
-- [Founder 1]: Operations, logistics
-- [Founder 2]: Tech, product
-- Advisors: [TBD]
+- Operations / community / logistics
+- Product / tech / automation
 
 ## Slide 11: The Ask
-- **Amount:** ₹2Cr ($240K)
-- **Use:** Tech, operations, marketing, working capital
-- **Milestone:** 1,000 orders/day in 5 neighborhoods within 12 months
+- Raise amount TBD after 2–4 weeks of **real order data**
+- Use of funds: ops float, riders, light tech, local acquisition inside JGC
 
 ## Slide 12: Vision
-Make every neighborhood in India a JG Mart neighborhood.
+Make Japan Garden City the reference neighborhood for reliable, WhatsApp-simple grocery delivery — then replicate deliberately.
 
 ---
 
-*Full source: `JG_Mart_Investor_Pitch_Deck.pptx`, `01_Investor_Deck/`.*
+*Canonical status: `docs/STATUS.md`. Do not distribute outdated India/₹ decks from ARCHIVE.*

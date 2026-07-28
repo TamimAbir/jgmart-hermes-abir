@@ -1,9 +1,9 @@
 # Contributing to JG Mart Hermes
 
-Thank you for your interest in contributing. This project is in active restructuring. Before contributing:
+Thank you for your interest. Read **[docs/STATUS.md](docs/STATUS.md)** before anything else — it is the single source of truth for stage, location, and priorities.
 
 ## Code of Conduct
-Be respectful. This is a business project serving real customers. Harassment or unprofessional behavior will not be tolerated.
+Be respectful. This project serves a real community (Japan Garden City, Dhaka). Harassment or unprofessional behavior will not be tolerated.
 
 ## How to Contribute
 
@@ -12,34 +12,45 @@ Be respectful. This is a business project serving real customers. Harassment or 
 git checkout -b feature/your-feature-name
 ```
 
-### 2. Code Standards
-- **Python:** Follow PEP 8, use `black` and `flake8`.
-- **JavaScript:** Use Prettier.
-- **HTML:** Valid HTML5, accessible (WCAG 2.1 AA).
-- **Commits:** Use [Conventional Commits](https://www.conventionalcommits.org/):
-  - `feat: add order export API`
-  - `fix: resolve dashboard memory leak`
-  - `docs: update operations manual`
+### 2. Priorities (what actually helps)
+1. Making catalog + Supabase admin work end-to-end
+2. Real order-path bugs and UX friction
+3. Tests for pricing, order status, and data validation
+4. Removing dead localStorage admin paths
+5. Documentation only when it reflects **live** behavior
 
-### 3. Testing
-- Add tests for any new logic in `tests/`.
-- Run `pytest` before submitting.
-- Ensure `black --check .` passes.
+Avoid expanding ARCHIVE or adding more speculative playbooks.
 
-### 4. Documentation
-- Update `docs/` if you change architecture or add features.
-- Update `CHANGELOG.md` for user-facing changes.
+### 3. Code Standards
+- **Python:** PEP 8; prefer `black` + `flake8`
+- **JavaScript / HTML:** Keep it simple and readable; prefer progressive enhancement
+- **Commits:** [Conventional Commits](https://www.conventionalcommits.org/)
+  - `feat: ...`
+  - `fix: ...`
+  - `docs: ...`
 
-### 5. Pull Requests
-- Fill out the PR template.
-- Link related issues.
-- Keep PRs focused — one feature/fix per PR.
+### 4. Testing
+```bash
+pip install -r requirements.txt
+python tests/validate_toolkit.py
+# Add real pytest cases under tests/ when you change business logic
+```
+
+### 5. Documentation
+- Update `docs/STATUS.md` if stage or priorities change
+- Update `CHANGELOG.md` for user-facing changes
+- Business docs must use **Bangladesh / BDT / JGC** language
+
+### 6. Pull Requests
+- Use the PR template
+- Link related issues
+- One focused change per PR
 
 ## Reporting Issues
-Use the bug report or feature request issue templates. For business inquiries, use the investor inquiry template.
+Use bug / feature / investor inquiry templates under `.github/ISSUE_TEMPLATE/`.
 
 ## Security
-Report security vulnerabilities privately via email to security@jgmart.example (replace with actual contact). Do not open public issues for security flaws.
+Report vulnerabilities privately. Do not open public issues for security flaws. Do not commit secrets — use `.env` from `.env.example`.
 
 ## License
 By contributing, you agree your code will be licensed under the MIT License.
