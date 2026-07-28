@@ -1,79 +1,68 @@
 # Financial Model
 
-## Assumptions
+**Currency:** BDT (৳)  
+**Market:** Japan Garden City, Dhaka (initial)  
+**Status:** Paper model — replace with live data ASAP
 
-| Parameter | Month 1 | Month 6 | Month 12 |
-|-----------|---------|---------|----------|
-| Neighborhoods | 1 | 3 | 8 |
-| Partner Stores | 5 | 25 | 80 |
-| Daily Orders | 100 | 500 | 2,000 |
-| AOV | ₹450 | ₹480 | ₹500 |
-| Gross Margin | 14% | 15% | 16% |
+## Assumptions (Pilot Scale)
 
-## Revenue Projection (Monthly)
+| Parameter | Conservative | Base |
+|-----------|--------------|------|
+| Daily orders (Month 1) | 15–30 | 40–60 |
+| AOV | ৳700 | ৳800 |
+| Delivery fee | ৳30 | ৳30 |
+| Blended commission | 8–11% | 11% |
 
-| Month | Orders | Revenue | Gross Profit | Net Profit |
-|-------|--------|---------|--------------|------------|
-| 1 | 3,000 | ₹13.5L | ₹1.9L | -₹2.5L |
-| 2 | 4,500 | ₹20.3L | ₹2.9L | -₹1.8L |
-| 3 | 6,000 | ₹27.0L | ₹3.8L | -₹0.8L |
-| 4 | 9,000 | ₹40.5L | ₹5.8L | ₹0.2L |
-| 5 | 12,000 | ₹54.0L | ₹7.8L | ₹1.5L |
-| 6 | 15,000 | ₹67.5L | ₹9.8L | ₹3.0L |
-| 12 | 60,000 | ₹270L | ₹41L | ₹18L |
+These are **targets**, not forecasts based on transactions.
 
-## Cost Structure
-
-### Fixed Costs (Monthly)
-| Item | Cost |
-|------|------|
-| Tech hosting | ₹5,000 |
-| Office / Co-working | ₹15,000 |
-| Founder stipends | ₹40,000 |
-| WhatsApp Business API | ₹3,000 |
-| **Total Fixed** | **₹63,000** |
-
-### Variable Costs (Per Order)
-| Item | Cost |
-|------|------|
-| Rider payout | ₹35 |
-| Packaging | ₹5 |
-| Fuel / logistics | ₹8 |
-| **Total Variable** | **₹48** |
-
-## Unit Economics
+## Unit Economics (Illustrative)
 
 ```
-AOV:                    ₹450
-Commission (7%):        ₹32
-Delivery fee:           ₹40
-Total Revenue:          ₹72
-Variable cost:          ₹48
-Gross Profit:           ₹24
-Contribution Margin:   33%
+AOV:                 ৳800
+Commission (~11%):   ৳88
+Delivery fee:        ৳30
+Gross intake:        ৳118
+
+Variable costs (rider, pack, fuel, misc):  must be measured live
+Target: positive contribution after variable costs
 ```
 
-**Break-even volume:** ~2,600 orders/month (fixed costs ÷ gross profit per order)
+Break-even volume depends on fixed monthly burn (hosting, tools, founder draw, float). Measure real burn weekly during pilot.
 
-## Runway Calculator
+## Cost Structure (Pilot)
 
-| Scenario | Seed Amount | Runway |
-|----------|-------------|--------|
-| Conservative | ₹1.5Cr | 8 months |
-| Base Case | ₹2.0Cr | 12 months |
-| Optimistic | ₹3.0Cr | 18 months |
+### Fixed (monthly, order-of-magnitude)
+| Item | Notes |
+|------|-------|
+| Hosting / Supabase / domain | Low hundreds of BDT to low thousands |
+| WhatsApp Business tooling | Depends on volume |
+| Founder / ops time | Largest real cost |
 
-## Funding History
-- Pre-seed: Bootstrapped (founder capital)
-- Seed: [Pending — target ₹2Cr]
+### Variable (per order)
+| Item | Notes |
+|------|-------|
+| Rider payout | Primary variable cost |
+| Packaging | |
+| Fuel / logistics | |
 
-## Key Metrics to Track
-- Daily Active Customers (DAC)
-- Orders per Customer per Month
-- Rider Utilization Rate
-- Partner Store Retention
-- Cash Conversion Cycle
+## What To Track From Day 1
+
+- Orders per day
+- AOV and cancellation rate
+- On-time delivery %
+- Contribution per order (actual)
+- Cash position / float
+- Partner settlement cycle
+
+## Funding
+
+- Pre-seed discussion should wait until **real order data** exists for at least 2–4 weeks.
+- Use-of-funds tables in older decks are directional only until then.
+
+## Source Files
+
+CSV calculators live under `assets/documents/`. Treat them as worksheets, not audited financials.
 
 ---
 
-*Source files: `JG_Mart_Financial_Model.xlsx`, `08_Financials/` directory.*
+*Update this file when live metrics replace assumptions. Canonical status: `docs/STATUS.md`.*

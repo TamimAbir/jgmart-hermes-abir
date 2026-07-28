@@ -2,93 +2,87 @@
 
 ## Executive Summary
 
-JG Mart is a hyperlocal grocery delivery platform operating at the neighborhood level in [City, India]. We combine WhatsApp-first ordering, real-time inventory, and trusted rider logistics to deliver fresh produce and FMCG products within 90 minutes.
+JG Mart is a hyperlocal grocery delivery service for **Japan Garden City (JGC), Dhaka, Bangladesh**. We combine WhatsApp-first ordering, partner-store inventory, and short delivery slots to serve residents in defined clusters/buildings.
 
 ### Problem
-- Neighborhood grocery is fragmented, unorganized, and price-inconsistent.
-- Small retailers lack digital tools but have the trust and footfall.
-- Customers want convenience but distrust new apps during the "app fatigue" era.
+- Neighborhood grocery is fragmented and price/availability inconsistent.
+- Small retailers have trust and footfall but lack simple digital tools.
+- Residents want convenience; many will not install another app.
 
 ### Solution
-- WhatsApp-native ordering (no app download required).
-- Hyperlocal delivery from trusted neighborhood stores.
-- Transparent pricing, real-time stock, and rider tracking.
+- WhatsApp-native (and lightweight web catalog) ordering.
+- Hyperlocal delivery from partner stores inside/near JGC.
+- Transparent pricing, stock awareness, and clear delivery windows.
 
-### Market
-- **TAM:** $900B Indian retail market
-- **SAM:** $12B neighborhood grocery in Tier 2/3 cities
-- **SOM:** 1% of local market in Year 1 = $120M GMV
+### Market (Initial)
+- **Beachhead:** Japan Garden City residential community.
+- **Expansion:** Adjacent dense residential societies in Dhaka after unit economics proven.
 
 ### Traction
-- [ ] Pilot launch: [Date]
-- [ ] 20+ partner stores onboarded
-- [ ] 500+ WhatsApp orders processed
-- [ ] NPS > 40
+- [ ] Pilot launch date confirmed
+- [ ] Partner stores onboarded
+- [ ] Real orders processed and measured
+- [ ] NPS / retention measured
 
 ## Business Model
 
 ### Revenue Streams
-1. **Delivery Fees:** ₹30–50 per order (distance-based)
-2. **Commission:** 5–8% of order value from partner stores
-3. **Premium Subscriptions:** ₹99/month for free deliveries + exclusive deals
-4. **Data Insights:** Aggregated demand signals to FMCG brands (Year 2)
+1. **Delivery fees** — distance/slot based (e.g. ৳30 standard)
+2. **Commission** — percentage of order value from partner stores
+3. **Subscription (later)** — free deliveries / priority for heavy users
+4. **Brand / data insights (Year 2+)** — only after meaningful volume
 
-### Unit Economics
-| Metric | Value |
-|--------|-------|
-| AOV (Average Order Value) | ₹450 |
-| Delivery Cost | ₹25 |
-| Rider Payout | ₹35 |
-| Commission per Order | ₹30 |
-| Gross Profit per Order | ₹65 (14.4%) |
+### Unit Economics (Targets — validate with live data)
+| Metric | Target |
+|--------|--------|
+| AOV | ৳800 |
+| Delivery fee | ৳30 |
+| Commission (blended) | ~11% |
+| Rider + packaging + variable logistics | Must leave positive contribution |
 
 ### Cost Structure
-- **Fixed:** Rider base salary (if hybrid model), tech hosting, office
-- **Variable:** Rider payout per delivery, WhatsApp API, fuel, packaging
+- **Fixed:** Founder time, hosting, WhatsApp Business tools, minimal ops overhead
+- **Variable:** Rider payout, packaging, fuel, payment fees
 
 ## Go-to-Market
 
-### Phase 1: Pilot (Months 1–3)
-- 1 neighborhood, 5 partner stores
-- WhatsApp-only, manual dispatch
-- Goal: 100 orders/day, prove unit economics
+### Phase 1: Pilot (Weeks 1–8)
+- 1 community (JGC), 3–5 partner stores
+- Manual / semi-automated dispatch
+- Goal: prove demand, delivery reliability, and contribution margin
 
-### Phase 2: Local Scale (Months 4–9)
-- 5 neighborhoods, 30 partners
-- Automated dispatch + basic dashboard
-- Goal: 1,000 orders/day, positive cash flow
+### Phase 2: Local depth
+- More partners and capacity inside JGC
+- Tighter SOPs, better inventory signals
+- Goal: consistent daily order volume without founder heroics
 
-### Phase 3: Expansion (Months 10–18)
-- 20+ neighborhoods, 150+ partners
-- Full PWA + app launch
-- Goal: 10,000 orders/day, raise Series A
+### Phase 3: Adjacent expansion
+- Only after positive unit economics and repeatable ops
 
 ## Competitive Advantage
 
-1. **WhatsApp-first** — Zero friction for non-app users
-2. **Trust network** — Local riders + known store owners
-3. **Lightweight tech** — Works on 2G/3G, no app download
-4. **Inventory transparency** — Real-time stock reduces order cancellations
+1. WhatsApp-first (low friction)
+2. Hyperlocal trust (stores + riders known to the community)
+3. Lightweight stack (no heavy app requirement)
+4. Ops discipline documented early
 
 ## Risks & Mitigations
 
-| Risk | Likelihood | Impact | Mitigation |
-|------|------------|--------|------------|
-| Rider attrition | Medium | High | Performance bonuses, insurance, ESOPs |
-| Partner churn | Low | Medium | Revenue sharing, co-marketing |
-| Regulatory (FSSAI) | Medium | High | Legal templates, compliance checks |
-| Tech debt | High | Medium | This restructure + quarterly audits |
-| Cash flow | Medium | High | 6-month runway, receivables < 7 days |
+| Risk | Mitigation |
+|------|------------|
+| Rider attrition | Fair pay, clear routes, simple tools |
+| Partner churn | Transparent settlement, low friction |
+| Food safety / quality | Clear policies, partner standards |
+| Tech debt | Ship narrow path first; avoid rewriting ARCHIVE |
+| Cash float | Tight receivables, small inventory float |
 
 ## Milestones
 
-- [ ] **M1:** Repo restructure complete, CI/CD live
-- [ ] **M2:** Pilot launch with 5 stores
-- [ ] **M3:** 100 daily orders, NPS > 40
-- [ ] **M4:** Positive unit economics validated
-- [ ] **M5:** Series A pitch deck ready
-- [ ] **M6:** 1,000 daily orders across 5 neighborhoods
+- [ ] Supabase live + admin usable daily
+- [ ] First 50 real orders
+- [ ] Contribution margin measured from real data
+- [ ] Pilot decision: expand / iterate / pause
 
 ---
 
-*For detailed financial projections, see `docs/business/FINANCIAL_MODEL.md`.*
+*See `docs/STATUS.md` for current execution status. Financial detail in `FINANCIAL_MODEL.md`.*

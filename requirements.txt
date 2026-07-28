@@ -1,0 +1,13 @@
+# JG Mart Hermes — Python dependencies
+# Install: pip install -r requirements.txt
+
+# Core (stdlib-only scripts need nothing; these are for CI + optional tools)
+pytest>=8.0.0
+black>=24.0.0
+flake8>=7.0.0
+bandit>=1.7.0
+requests>=2.31.0
+
+# Optional: only if you use the corresponding scripts
+# rclone is a system binary, not a pip package — install via apt/winget/brew
+# google-api-python-client>=2.100.0  # for future Drive API (currently uses rclone)

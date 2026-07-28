@@ -1,44 +1,55 @@
 # Executive Summary
 
 ## The Opportunity
-India's neighborhood grocery market is $12B and growing, yet remains 95% unorganized. JG Mart digitizes this fragmented supply chain with a WhatsApp-first delivery platform that requires zero app downloads and works on 2G networks.
+
+Japan Garden City (JGC) and similar dense residential communities in Dhaka have high daily grocery demand but fragmented, inconsistent supply. Residents want convenience without downloading yet another app. Small neighborhood stores have trust and stock but no digital tools.
 
 ## The Solution
-- **WhatsApp-native ordering** — customers order in 3 taps
-- **Hyperlocal delivery** — riders deliver within 90 minutes
-- **Trusted network** — local store owners + known riders
-- **Lightweight tech** — PWA, no app, no onboarding friction
+
+- **WhatsApp-native ordering** — customers order in a few taps, no app download
+- **Hyperlocal delivery** — riders deliver within defined morning/evening slots
+- **Trusted network** — local partner stores + known riders inside JGC clusters
+- **Lightweight tech** — PWA + Supabase, works on modest networks
 
 ## Traction & Validation
-- [ ] Business plan finalized
-- [ ] Legal templates drafted (terms, privacy, partner agreement)
-- [ ] Operations playbooks written for daily routine
-- [ ] Financial model projecting ₹65 profit per order
+
+- [x] Business plan and legal templates drafted
+- [x] Operations playbooks written
+- [x] Financial model with unit economics (paper)
+- [ ] Pilot launch with real partners
+- [ ] First 100 real orders
+- [ ] Validated contribution margin from live data
 
 ## The Ask
-We are raising a **pre-seed round of ₹2Cr ($240K)** to:
-1. Launch pilot in 1 neighborhood (5 stores, 10 riders)
-2. Build production-grade backend (FastAPI + PostgreSQL)
-3. Acquire first 500 customers via WhatsApp flyers and referrals
 
-## Use of Funds
-| Category | Amount | Purpose |
-|----------|--------|---------|
-| Tech | ₹40L | Backend dev, hosting, WhatsApp API |
-| Operations | ₹80L | Rider salaries, fuel, packaging |
-| Marketing | ₹50L | Flyers, referral bonuses, WhatsApp ads |
-| Working Capital | ₹30L | Inventory float, receivables |
+Pre-seed capital to:
+1. Launch pilot in Japan Garden City (target: 5 partner stores, small rider pool)
+2. Complete production backend (Supabase fully wired + minimal automation)
+3. Acquire first hundreds of customers via WhatsApp, flyers, and referrals inside the community
+
+Exact raise amount and use-of-funds should be finalized only after 2–4 weeks of real order data.
+
+## Unit Economics (Target, Paper)
+
+| Metric | Target |
+|--------|--------|
+| AOV | ৳800 |
+| Delivery fee | ৳30 |
+| Commission (blended) | ~11% |
+| Contribution per order | Positive after variable costs |
+
+Live numbers will replace these targets.
 
 ## Team
-- **Founder 1:** [Name] — Operations, logistics, community
-- **Founder 2:** [Name] — Tech, product, automation
-- **Advisors:** [TBD]
+
+- Operations / community / logistics
+- Product / tech / automation
 
 ## Contact
-- **Email:** hello@jgmart.example
-- **WhatsApp:** +91-XXXXX-XXXXX
-- **LinkedIn:** [Company Page]
+
+- WhatsApp: +8801870489448 (business number in config)
+- Update public contact details before external distribution
 
 ---
 
-*Full details in the pitch deck (`docs/business/PITCH_DECK.md`) and financial model (`docs/business/FINANCIAL_MODEL.md`).*
+*Full model: `docs/business/FINANCIAL_MODEL.md`. Status: `docs/STATUS.md`.*
