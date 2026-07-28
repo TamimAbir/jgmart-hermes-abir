@@ -16,24 +16,32 @@ import os
 import sys
 import subprocess
 import shutil
-import tempfile
+import json
 from pathlib import Path
 
-BASE_DIR = Path(__file__).parent.parent
+# Repo root: src/scripts/automation -> ../../..
+BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 
 APPS = {
     "dashboard": {
-        "dir": BASE_DIR / "05_Tech_Dashboard",
-        "files": ["index.html", "README.txt", "sample_data.json"],
-        "description": "KPI Dashboard (Chart.js, Tailwind, localStorage)",
+        "dir": BASE_DIR / "src" / "web" / "dashboard",
+        "files": ["index.html", "README.txt"],
+        "description": "KPI / ops dashboard (HTML + localStorage paths)",
     },
     "catalog": {
-        "dir": BASE_DIR / "06_Web_Catalog",
+        "dir": BASE_DIR / "src" / "web" / "catalog",
         "files": [
-            "index.html", "catalog_data.json", "manifest.json",
-            "order_intake.html", "README.txt",
+            "index.html",
+            "catalog_data.json",
+            "manifest.json",
+            "order_intake.html",
         ],
-        "description": "Customer Catalog + Order Intake (47 products, WhatsApp)",
+        "description": "Customer catalog + order intake (WhatsApp handoff)",
+    },
+    "admin": {
+        "dir": BASE_DIR / "src" / "web" / "admin-new",
+        "files": ["index.html"],
+        "description": "Supabase-backed admin panel",
     },
 }
 
@@ -49,31 +57,26 @@ def check_netlify():
 def list_apps():
     print("\n📦 JG Mart — Deployable Applications\n")
     for name, info in APPS.items():
-        print(f"  {name}:")
-        print(f"    📁 {info['dir'].name}/")
-        print(f"    ℹ️  {info['description']}")
-        print(f"    📄 Files: {', '.join(info['files'])}\n")
+        exists = info["dir"].is_dir()
+        mark = "✓" if exists else "✗ missing"
+        print(f"  {name}: [{mark}]")
+        print(f"    📁 {info['dir'].relative_to(BASE_DIR)}/")
+        print(f"    ℹ️  {info['description']}\n")
 
 
 def setup_tools():
     print("🔧 Installing deploy tools...\n")
 
     if not check_vercel():
-        print("  Installing Vercel CLI...")
-        subprocess.run(
-            [sys.executable, "-m", "pip", "install", "vercel"],
-            capture_output=True,
-        )
-        # Try npm if pip fails
-        if not check_vercel():
-            subprocess.run(["npm", "install", "-g", "vercel"], check=False)
+        print("  Installing Vercel CLI via npm...")
+        subprocess.run(["npm", "install", "-g", "vercel"], check=False)
 
     if not check_netlify():
         print("  Installing Netlify CLI...")
         subprocess.run(["npm", "install", "-g", "netlify-cli"], check=False)
 
     print("\n  ✅ Setup complete!")
-    print("  NOTE: You still need to run `vercel login` or `netlify login` once.")
+    print("  NOTE: Run `vercel login` or `netlify login` once.")
 
 
 def deploy_vercel(app_name):
@@ -82,33 +85,40 @@ def deploy_vercel(app_name):
         print(f"❌ Unknown app: {app_name}")
         return 1
 
+    app_dir = info["dir"]
+    if not app_dir.is_dir():
+        print(f"❌ Directory not found: {app_dir}")
+        return 1
+
     print(f"\n{'='*60}")
     print(f"🚀 Deploying {app_name} to Vercel...")
+    print(f"   Path: {app_dir}")
     print(f"{'='*60}\n")
 
     if not check_vercel():
         print("❌ Vercel CLI not found. Run: python auto_deploy.py --setup")
         return 1
 
-    # Create a temporary vercel.json for static deployment
-    os.chdir(info["dir"])
     vercel_json = {
         "version": 2,
-        "builds": [{"src": "*.html", "use": "@vercel/static"}],
+        "builds": [{"src": "**/*", "use": "@vercel/static"}],
         "routes": [{"src": "/(.*)", "dest": "/$1"}],
     }
 
-    import json
-    with open("vercel.json", "w") as f:
-        json.dump(vercel_json, f)
+    vpath = app_dir / "vercel.json"
+    wrote_temp = False
+    if not vpath.exists():
+        with open(vpath, "w", encoding="utf-8") as f:
+            json.dump(vercel_json, f, indent=2)
+        wrote_temp = True
 
     result = subprocess.run(
-        ["vercel", "--prod", "--yes", "--public"],
-        cwd=info["dir"],
+        ["vercel", "--prod", "--yes"],
+        cwd=str(app_dir),
     )
 
-    # Clean up
-    Path(info["dir"] / "vercel.json").unlink(missing_ok=True)
+    if wrote_temp:
+        vpath.unlink(missing_ok=True)
 
     if result.returncode == 0:
         print(f"\n✅ {app_name} deployed to Vercel successfully!")
@@ -123,34 +133,24 @@ def deploy_netlify(app_name):
         print(f"❌ Unknown app: {app_name}")
         return 1
 
+    app_dir = info["dir"]
+    if not app_dir.is_dir():
+        print(f"❌ Directory not found: {app_dir}")
+        return 1
+
     print(f"\n{'='*60}")
     print(f"🚀 Deploying {app_name} to Netlify...")
+    print(f"   Path: {app_dir}")
     print(f"{'='*60}\n")
 
     if not check_netlify():
         print("❌ Netlify CLI not found.")
-        print("   Run: npm install -g netlify-cli")
-        print("   Then: netlify login")
+        print("   Run: npm install -g netlify-cli && netlify login")
         return 1
 
-    # Create netlify.toml for static deployment
-    netlify_toml = """
-[build]
-  publish = "."
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-"""
-    with open(info["dir"] / "netlify.toml", "w") as f:
-        f.write(netlify_toml)
-
     result = subprocess.run(
-        ["netlify", "deploy", "--prod", "--dir", str(info["dir"])],
+        ["netlify", "deploy", "--prod", "--dir", str(app_dir)],
     )
-
-    Path(info["dir"] / "netlify.toml").unlink(missing_ok=True)
 
     if result.returncode == 0:
         print(f"\n✅ {app_name} deployed to Netlify successfully!")
@@ -163,11 +163,12 @@ def main():
     if len(sys.argv) < 2:
         print("JG Mart — Auto-Deploy Tool\n")
         print("Usage:")
-        print("  python auto_deploy.py --list                List deployable apps")
-        print("  python auto_deploy.py --setup               Install deploy tools")
-        print("  python auto_deploy.py --dashboard --vercel  Deploy dashboard")
-        print("  python auto_deploy.py --catalog --netlify   Deploy catalog")
-        print("  python auto_deploy.py --all --vercel       Deploy all to Vercel")
+        print("  python auto_deploy.py --list")
+        print("  python auto_deploy.py --setup")
+        print("  python auto_deploy.py --catalog --vercel")
+        print("  python auto_deploy.py --dashboard --netlify")
+        print("  python auto_deploy.py --admin --vercel")
+        print("  python auto_deploy.py --all --vercel")
         sys.exit(1)
 
     args = sys.argv[1:]
@@ -186,6 +187,8 @@ def main():
         target = "dashboard"
     elif "--catalog" in args:
         target = "catalog"
+    elif "--admin" in args:
+        target = "admin"
     elif "--all" in args:
         target = "all"
 
@@ -195,21 +198,21 @@ def main():
         platform = "netlify"
 
     if not target or not platform:
-        print("❌ Specify both app (--dashboard/--catalog/--all)")
+        print("❌ Specify both app (--dashboard/--catalog/--admin/--all)")
         print("   and platform (--vercel/--netlify)")
         sys.exit(1)
 
+    deploy_fn = deploy_vercel if platform == "vercel" else deploy_netlify
+
     if target == "all":
+        code = 0
         for app in APPS:
-            if platform == "vercel":
-                deploy_vercel(app)
-            else:
-                deploy_netlify(app)
+            c = deploy_fn(app)
+            if c != 0:
+                code = c
+        sys.exit(code)
     else:
-        if platform == "vercel":
-            deploy_vercel(target)
-        else:
-            deploy_netlify(target)
+        sys.exit(deploy_fn(target))
 
 
 if __name__ == "__main__":
