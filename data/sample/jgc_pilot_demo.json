@@ -1,0 +1,271 @@
+{
+  "_meta": {
+    "title": "JG Mart — Japan Garden City pilot demo dataset",
+    "location": "Japan Garden City, Mohammadpur, Dhaka",
+    "currency": "BDT",
+    "generated": "2026-07-28",
+    "note": "Synthetic but realistic. Not production customer PII."
+  },
+  "settings": {
+    "businessName": "JG Mart",
+    "location": "Japan Garden City, Mohammadpur, Dhaka",
+    "whatsapp": "+8801870489448",
+    "currency": "BDT",
+    "currencySymbol": "৳",
+    "aov": 820,
+    "deliveryFeeDefault": 30,
+    "commissionBlended": 0.11
+  },
+  "partners": [
+    {
+      "id": "part001",
+      "shop_name": "JGC Krishi Corner",
+      "category": "vegetables",
+      "contact_name": "Karim Mia",
+      "phone": "01711110001",
+      "whatsapp": "8801711110001",
+      "address": "Near Gate 2, Japan Garden City",
+      "commission_rate": 0.12,
+      "is_active": true,
+      "is_verified": true
+    },
+    {
+      "id": "part002",
+      "shop_name": "City Grocery Traders",
+      "category": "rice_dal",
+      "contact_name": "Abdul Malek",
+      "phone": "01711110002",
+      "whatsapp": "8801711110002",
+      "address": "Ring Road side, Mohammadpur",
+      "commission_rate": 0.09,
+      "is_active": true,
+      "is_verified": true
+    },
+    {
+      "id": "part003",
+      "shop_name": "Fresh Catch BD",
+      "category": "fish",
+      "contact_name": "Shafiqul Islam",
+      "phone": "01711110003",
+      "whatsapp": "8801711110003",
+      "address": "Fish market supply, JGC pickup 10:00",
+      "commission_rate": 0.08,
+      "is_active": true,
+      "is_verified": true
+    },
+    {
+      "id": "part004",
+      "shop_name": "Halal Meats JGC",
+      "category": "meat",
+      "contact_name": "Rafiq Hossain",
+      "phone": "01711110004",
+      "whatsapp": "8801711110004",
+      "address": "Cluster 3 service road",
+      "commission_rate": 0.08,
+      "is_active": true,
+      "is_verified": true
+    },
+    {
+      "id": "part005",
+      "shop_name": "Green Dairy",
+      "category": "dairy_eggs",
+      "contact_name": "Nasrin Sultana",
+      "phone": "01711110005",
+      "whatsapp": "8801711110005",
+      "address": "Morning milk route — JGC",
+      "commission_rate": 0.10,
+      "is_active": true,
+      "is_verified": true
+    },
+    {
+      "id": "part006",
+      "shop_name": "Daily Needs BD",
+      "category": "fmcg",
+      "contact_name": "Imran Chowdhury",
+      "phone": "01711110006",
+      "whatsapp": "8801711110006",
+      "address": "Wholesale lane, Mohammadpur",
+      "commission_rate": 0.07,
+      "is_active": true,
+      "is_verified": false
+    }
+  ],
+  "customers": [
+    {"id": "cust_jgc_01", "name": "Rafiq Ahmed", "phone": "01712001001", "building": "Building 3", "flat": "4B", "cluster": 1, "total_orders": 6, "total_spend": 5200},
+    {"id": "cust_jgc_02", "name": "Nusrat Jahan", "phone": "01712001002", "building": "Building 3", "flat": "7A", "cluster": 1, "total_orders": 11, "total_spend": 9800},
+    {"id": "cust_jgc_03", "name": "Kabir Hasan", "phone": "01712001003", "building": "Building 7", "flat": "2C", "cluster": 2, "total_orders": 3, "total_spend": 2100},
+    {"id": "cust_jgc_04", "name": "Shamima Akter", "phone": "01712001004", "building": "Building 12", "flat": "5D", "cluster": 2, "total_orders": 8, "total_spend": 7400},
+    {"id": "cust_jgc_05", "name": "Tanvir Rahman", "phone": "01712001005", "building": "Building 18", "flat": "1A", "cluster": 3, "total_orders": 4, "total_spend": 3600},
+    {"id": "cust_jgc_06", "name": "Farzana Islam", "phone": "01712001006", "building": "Building 22", "flat": "9B", "cluster": 3, "total_orders": 9, "total_spend": 8100},
+    {"id": "cust_jgc_07", "name": "Mahmudul Hasan", "phone": "01712001007", "building": "Building 28", "flat": "3C", "cluster": 4, "total_orders": 2, "total_spend": 1500},
+    {"id": "cust_jgc_08", "name": "Laila Begum", "phone": "01712001008", "building": "Building 5", "flat": "6A", "cluster": 1, "total_orders": 14, "total_spend": 12500},
+    {"id": "cust_jgc_09", "name": "Sajid Khan", "phone": "01712001009", "building": "Building 15", "flat": "8B", "cluster": 2, "total_orders": 5, "total_spend": 4300},
+    {"id": "cust_jgc_10", "name": "Parvin Sultana", "phone": "01712001010", "building": "Building 20", "flat": "2A", "cluster": 3, "total_orders": 7, "total_spend": 6100}
+  ],
+  "orders": [
+    {
+      "order_number": "JG-00011",
+      "customer_name": "Rafiq Ahmed",
+      "customer_phone": "01712001001",
+      "customer_building": "Building 3",
+      "customer_flat": "4B",
+      "delivery_zone_id": 1,
+      "delivery_slot": "morning",
+      "delivery_date": "2026-07-27",
+      "status": "delivered",
+      "payment_method": "bkash",
+      "payment_status": "paid",
+      "subtotal": 890,
+      "delivery_fee": 0,
+      "total": 890,
+      "items": [
+        {"product_id": "p008", "product_name": "Potato (Local)", "qty": 3, "unit_price": 35, "total": 105, "partner_id": "part001"},
+        {"product_id": "p007", "product_name": "Red Onion", "qty": 2, "unit_price": 60, "total": 120, "partner_id": "part001"},
+        {"product_id": "p001", "product_name": "Premium Chinigura Rice", "qty": 2, "unit_price": 120, "total": 240, "partner_id": "part002"},
+        {"product_id": "p021", "product_name": "Farm Eggs", "qty": 1, "unit_price": 120, "total": 120, "partner_id": "part005"},
+        {"product_id": "p017", "product_name": "Chicken (Broiler)", "qty": 1.5, "unit_price": 220, "total": 330, "partner_id": "part004"}
+      ]
+    },
+    {
+      "order_number": "JG-00012",
+      "customer_name": "Nusrat Jahan",
+      "customer_phone": "01712001002",
+      "customer_building": "Building 3",
+      "customer_flat": "7A",
+      "delivery_zone_id": 1,
+      "delivery_slot": "evening",
+      "delivery_date": "2026-07-27",
+      "status": "delivered",
+      "payment_method": "cash",
+      "payment_status": "paid",
+      "subtotal": 1240,
+      "delivery_fee": 0,
+      "total": 1240,
+      "items": [
+        {"product_id": "p013", "product_name": "Ruhi Fish (Medium)", "qty": 2, "unit_price": 280, "total": 560, "partner_id": "part003"},
+        {"product_id": "p009", "product_name": "Tomato (Deshi)", "qty": 2, "unit_price": 70, "total": 140, "partner_id": "part001"},
+        {"product_id": "p004", "product_name": "Mustard Oil (Fortified)", "qty": 1, "unit_price": 180, "total": 180, "partner_id": "part002"},
+        {"product_id": "p020", "product_name": "Fresh Cow Milk", "qty": 3, "unit_price": 80, "total": 240, "partner_id": "part005"},
+        {"product_id": "p025", "product_name": "Banana (Sagor)", "qty": 1, "unit_price": 50, "total": 50, "partner_id": "part001"}
+      ]
+    },
+    {
+      "order_number": "JG-00013",
+      "customer_name": "Tanvir Rahman",
+      "customer_phone": "01712001005",
+      "customer_building": "Building 18",
+      "customer_flat": "1A",
+      "delivery_zone_id": 2,
+      "delivery_slot": "morning",
+      "delivery_date": "2026-07-28",
+      "status": "out_for_delivery",
+      "payment_method": "nagad",
+      "payment_status": "paid",
+      "subtotal": 650,
+      "delivery_fee": 20,
+      "total": 670,
+      "items": [
+        {"product_id": "p051", "product_name": "Masoor Dal", "qty": 1, "unit_price": 100, "total": 100, "partner_id": "part002"},
+        {"product_id": "p008", "product_name": "Potato (Local)", "qty": 5, "unit_price": 35, "total": 175, "partner_id": "part001"},
+        {"product_id": "p017", "product_name": "Chicken (Broiler)", "qty": 1, "unit_price": 220, "total": 220, "partner_id": "part004"},
+        {"product_id": "p033", "product_name": "Coca-Cola (1.5L)", "qty": 2, "unit_price": 70, "total": 140, "partner_id": "part006"}
+      ]
+    },
+    {
+      "order_number": "JG-00014",
+      "customer_name": "Laila Begum",
+      "customer_phone": "01712001008",
+      "customer_building": "Building 5",
+      "customer_flat": "6A",
+      "delivery_zone_id": 1,
+      "delivery_slot": "evening",
+      "delivery_date": "2026-07-28",
+      "status": "confirmed",
+      "payment_method": "cash",
+      "payment_status": "pending",
+      "subtotal": 1580,
+      "delivery_fee": 0,
+      "total": 1580,
+      "items": [
+        {"product_id": "p015", "product_name": "Ilish Fish (Hilsa)", "qty": 1, "unit_price": 850, "total": 850, "partner_id": "part003"},
+        {"product_id": "p054", "product_name": "Biryani Rice (Kallijira)", "qty": 2, "unit_price": 150, "total": 300, "partner_id": "part002"},
+        {"product_id": "p007", "product_name": "Red Onion", "qty": 2, "unit_price": 60, "total": 120, "partner_id": "part001"},
+        {"product_id": "p006", "product_name": "Turmeric Powder", "qty": 1, "unit_price": 80, "total": 80, "partner_id": "part002"},
+        {"product_id": "p023", "product_name": "Yogurt (Mishti Doi)", "qty": 2, "unit_price": 60, "total": 120, "partner_id": "part005"}
+      ]
+    },
+    {
+      "order_number": "JG-00015",
+      "customer_name": "Mahmudul Hasan",
+      "customer_phone": "01712001007",
+      "customer_building": "Building 28",
+      "customer_flat": "3C",
+      "delivery_zone_id": 3,
+      "delivery_slot": "morning",
+      "delivery_date": "2026-07-28",
+      "status": "pending",
+      "payment_method": "bkash",
+      "payment_status": "pending",
+      "subtotal": 420,
+      "delivery_fee": 30,
+      "total": 450,
+      "items": [
+        {"product_id": "p021", "product_name": "Farm Eggs", "qty": 1, "unit_price": 120, "total": 120, "partner_id": "part005"},
+        {"product_id": "p020", "product_name": "Fresh Cow Milk", "qty": 2, "unit_price": 80, "total": 160, "partner_id": "part005"},
+        {"product_id": "p034", "product_name": "Parle-G Biscuits", "qty": 3, "unit_price": 20, "total": 60, "partner_id": "part006"},
+        {"product_id": "p039", "product_name": "Coriander Leaves", "qty": 2, "unit_price": 15, "total": 30, "partner_id": "part001"}
+      ]
+    }
+  ],
+  "settlement_demo": {
+    "description": "Illustrative credits after delivered orders (BDT). Use with post_partner_sale_credit in live DB.",
+    "period": {"start": "2026-07-21", "end": "2026-07-27"},
+    "by_partner": [
+      {
+        "partner_id": "part001",
+        "shop_name": "JGC Krishi Corner",
+        "gross_sales": 515,
+        "commission_rate": 0.12,
+        "commission": 61,
+        "net_payable": 454
+      },
+      {
+        "partner_id": "part002",
+        "shop_name": "City Grocery Traders",
+        "gross_sales": 420,
+        "commission_rate": 0.09,
+        "commission": 37,
+        "net_payable": 383
+      },
+      {
+        "partner_id": "part003",
+        "shop_name": "Fresh Catch BD",
+        "gross_sales": 560,
+        "commission_rate": 0.08,
+        "commission": 44,
+        "net_payable": 516
+      },
+      {
+        "partner_id": "part004",
+        "shop_name": "Halal Meats JGC",
+        "gross_sales": 330,
+        "commission_rate": 0.08,
+        "commission": 26,
+        "net_payable": 304
+      },
+      {
+        "partner_id": "part005",
+        "shop_name": "Green Dairy",
+        "gross_sales": 360,
+        "commission_rate": 0.10,
+        "commission": 36,
+        "net_payable": 324
+      }
+    ]
+  },
+  "riders": [
+    {"id": "rider_a", "name": "Hasan Ali", "phone": "01713001001", "zone": "Cluster 1-2", "orders_today": 6},
+    {"id": "rider_b", "name": "Jamal Uddin", "phone": "01713001002", "zone": "Cluster 3", "orders_today": 4},
+    {"id": "rider_c", "name": "Rashed Khan", "phone": "01713001003", "zone": "Cluster 4", "orders_today": 3}
+  ]
+}

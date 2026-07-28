@@ -1,76 +1,57 @@
 {
-  "orders": [
-    {"id":"ORD-10000","customerId":"cust_0","customerName":"A Rahman","building":"Bldg 1","items":5,"total":1200,"status":"Delivered","rider":"Rider A","date":"2024-06-15T10:30:00.000Z"},
-    {"id":"ORD-10001","customerId":"cust_1","customerName":"S Ahmed","building":"Bldg 3","items":3,"total":850,"status":"Delivered","rider":"Rider B","date":"2024-06-16T09:15:00.000Z"},
-    {"id":"ORD-10002","customerId":"cust_2","customerName":"N Islam","building":"Bldg 5","items":8,"total":2100,"status":"Processing","rider":"Rider C","date":"2024-06-17T11:45:00.000Z"},
-    {"id":"ORD-10003","customerId":"cust_3","customerName":"K Hossain","building":"Bldg 7","items":2,"total":450,"status":"Delivered","rider":"Rider A","date":"2024-06-18T08:20:00.000Z"},
-    {"id":"ORD-10004","customerId":"cust_4","customerName":"R Begum","building":"Bldg 9","items":6,"total":1800,"status":"Out for Delivery","rider":"Rider D","date":"2024-06-19T12:00:00.000Z"},
-    {"id":"ORD-10005","customerId":"cust_5","customerName":"M Khan","building":"Bldg 11","items":4,"total":950,"status":"Delivered","rider":"Rider B","date":"2024-06-20T10:10:00.000Z"},
-    {"id":"ORD-10006","customerId":"cust_6","customerName":"T Akter","building":"Bldg 14","items":7,"total":2200,"status":"Pending","rider":"","date":"2024-06-21T13:25:00.000Z"},
-    {"id":"ORD-10007","customerId":"cust_7","customerName":"J Uddin","building":"Bldg 16","items":1,"total":300,"status":"Cancelled","rider":"","date":"2024-06-22T09:50:00.000Z"},
-    {"id":"ORD-10008","customerId":"cust_8","customerName":"F Ahmed","building":"Bldg 18","items":9,"total":2800,"status":"Delivered","rider":"Rider C","date":"2024-06-23T11:05:00.000Z"},
-    {"id":"ORD-10009","customerId":"cust_9","customerName":"P Parvin","building":"Bldg 21","items":5,"total":1400,"status":"Delivered","rider":"Rider E","date":"2024-06-24T08:40:00.000Z"},
-    {"id":"ORD-10010","customerId":"cust_10","customerName":"M Ali","building":"Bldg 23","items":3,"total":780,"status":"Delivered","rider":"Rider A","date":"2024-06-25T10:55:00.000Z"},
-    {"id":"ORD-10011","customerId":"cust_11","customerName":"S Begum","building":"Bldg 25","items":6,"total":1650,"status":"Processing","rider":"Rider B","date":"2024-06-26T12:20:00.000Z"},
-    {"id":"ORD-10012","customerId":"cust_12","customerName":"R Hossain","building":"Bldg 27","items":4,"total":1100,"status":"Delivered","rider":"Rider D","date":"2024-06-27T09:35:00.000Z"},
-    {"id":"ORD-10013","customerId":"cust_13","customerName":"A Karim","building":"Bldg 1","items":8,"total":2400,"status":"Delivered","rider":"Rider C","date":"2024-06-28T11:10:00.000Z"},
-    {"id":"ORD-10014","customerId":"cust_14","customerName":"D Islam","building":"Bldg 3","items":2,"total":520,"status":"Out for Delivery","rider":"Rider E","date":"2024-06-29T08:05:00.000Z"},
-    {"id":"ORD-10015","customerId":"cust_15","customerName":"N Ahmed","building":"Bldg 5","items":5,"total":1350,"status":"Pending","rider":"","date":"2024-06-30T13:40:00.000Z"},
-    {"id":"ORD-10016","customerId":"cust_16","customerName":"T Islam","building":"Bldg 7","items":7,"total":1900,"status":"Delivered","rider":"Rider A","date":"2024-07-01T10:25:00.000Z"},
-    {"id":"ORD-10017","customerId":"cust_17","customerName":"K Ahmed","building":"Bldg 9","items":3,"total":870,"status":"Delivered","rider":"Rider B","date":"2024-07-02T09:15:00.000Z"},
-    {"id":"ORD-10018","customerId":"cust_18","customerName":"S Rahman","building":"Bldg 11","items":6,"total":1750,"status":"Processing","rider":"Rider D","date":"2024-07-03T11:50:00.000Z"},
-    {"id":"ORD-10019","customerId":"cust_19","customerName":"J Begum","building":"Bldg 14","items":4,"total":980,"status":"Delivered","rider":"Rider C","date":"2024-07-04T08:30:00.000Z"}
-  ],
-  "customers": [
-    {"id":"cust_0","name":"A Rahman","phone":"01710000001","building":"Bldg 1","totalOrders":15,"totalSpend":45000,"joined":"2024-01-15T00:00:00.000Z"},
-    {"id":"cust_1","name":"S Ahmed","phone":"01710000002","building":"Bldg 3","totalOrders":8,"totalSpend":22000,"joined":"2024-02-20T00:00:00.000Z"},
-    {"id":"cust_2","name":"N Islam","phone":"01710000003","building":"Bldg 5","totalOrders":12,"totalSpend":35000,"joined":"2024-01-10T00:00:00.000Z"},
-    {"id":"cust_3","name":"K Hossain","phone":"01710000004","building":"Bldg 7","totalOrders":6,"totalSpend":15000,"joined":"2024-03-05T00:00:00.000Z"},
-    {"id":"cust_4","name":"R Begum","phone":"01710000005","building":"Bldg 9","totalOrders":20,"totalSpend":55000,"joined":"2023-12-01T00:00:00.000Z"},
-    {"id":"cust_5","name":"M Khan","phone":"01710000006","building":"Bldg 11","totalOrders":10,"totalSpend":28000,"joined":"2024-02-14T00:00:00.000Z"},
-    {"id":"cust_6","name":"T Akter","phone":"01710000007","building":"Bldg 14","totalOrders":18,"totalSpend":48000,"joined":"2024-01-25T00:00:00.000Z"},
-    {"id":"cust_7","name":"J Uddin","phone":"01710000008","building":"Bldg 16","totalOrders":4,"totalSpend":8000,"joined":"2024-04-10T00:00:00.000Z"},
-    {"id":"cust_8","name":"F Ahmed","phone":"01710000009","building":"Bldg 18","totalOrders":14,"totalSpend":42000,"joined":"2024-02-28T00:00:00.000Z"},
-    {"id":"cust_9","name":"P Parvin","phone":"01710000010","building":"Bldg 21","totalOrders":9,"totalSpend":25000,"joined":"2024-03-15T00:00:00.000Z"},
-    {"id":"cust_10","name":"M Ali","phone":"01710000011","building":"Bldg 23","totalOrders":11,"totalSpend":32000,"joined":"2024-01-30T00:00:00.000Z"},
-    {"id":"cust_11","name":"S Begum","phone":"01710000012","building":"Bldg 25","totalOrders":7,"totalSpend":19000,"joined":"2024-04-05T00:00:00.000Z"},
-    {"id":"cust_12","name":"R Hossain","phone":"01710000013","building":"Bldg 27","totalOrders":16,"totalSpend":51000,"joined":"2023-11-20T00:00:00.000Z"},
-    {"id":"cust_13","name":"A Karim","phone":"01710000014","building":"Bldg 1","totalOrders":5,"totalSpend":12000,"joined":"2024-05-01T00:00:00.000Z"},
-    {"id":"cust_14","name":"D Islam","phone":"01710000015","building":"Bldg 3","totalOrders":13,"totalSpend":36000,"joined":"2024-02-08T00:00:00.000Z"},
-    {"id":"cust_15","name":"N Ahmed","phone":"01710000016","building":"Bldg 5","totalOrders":3,"totalSpend":6000,"joined":"2024-05-20T00:00:00.000Z"},
-    {"id":"cust_16","name":"T Islam","phone":"01710000017","building":"Bldg 7","totalOrders":21,"totalSpend":58000,"joined":"2023-10-15T00:00:00.000Z"},
-    {"id":"cust_17","name":"K Ahmed","phone":"01710000018","building":"Bldg 9","totalOrders":8,"totalSpend":21000,"joined":"2024-03-22T00:00:00.000Z"},
-    {"id":"cust_18","name":"S Rahman","phone":"01710000019","building":"Bldg 11","totalOrders":17,"totalSpend":49000,"joined":"2024-01-05T00:00:00.000Z"},
-    {"id":"cust_19","name":"J Begum","phone":"01710000020","building":"Bldg 14","totalOrders":10,"totalSpend":27000,"joined":"2024-04-18T00:00:00.000Z"}
-  ],
-  "partners": [
-    {"id":"part_0","name":"Rider A","category":"Rider","ordersToday":12,"onTime":95,"score":92},
-    {"id":"part_1","name":"Rider B","category":"Rider","ordersToday":8,"onTime":88,"score":85},
-    {"id":"part_2","name":"Rider C","category":"Rider","ordersToday":15,"onTime":97,"score":94},
-    {"id":"part_3","name":"Rider D","category":"Rider","ordersToday":6,"onTime":82,"score":78},
-    {"id":"part_4","name":"Rider E","category":"Rider","ordersToday":10,"onTime":91,"score":88},
-    {"id":"part_5","name":"Supplier X","category":"Supplier","ordersToday":0,"onTime":0,"score":90},
-    {"id":"part_6","name":"Warehouse Y","category":"Warehouse","ordersToday":0,"onTime":0,"score":85},
-    {"id":"part_7","name":"Delivery Z","category":"Delivery","ordersToday":0,"onTime":0,"score":92}
-  ],
-  "inventory": [
-    {"id":"inv_0","sku":"SKU-001","name":"Rice (5kg)","category":"Grains","stock":120,"reorderPoint":30,"dailySales":8},
-    {"id":"inv_1","sku":"SKU-002","name":"Rice (10kg)","category":"Grains","stock":45,"reorderPoint":20,"dailySales":4},
-    {"id":"inv_2","sku":"SKU-003","name":"Onion (1kg)","category":"Vegetables","stock":8,"reorderPoint":15,"dailySales":12},
-    {"id":"inv_3","sku":"SKU-004","name":"Potato (1kg)","category":"Vegetables","stock":150,"reorderPoint":25,"dailySales":6},
-    {"id":"inv_4","sku":"SKU-005","name":"Eggs (12 pcs)","category":"Dairy","stock":3,"reorderPoint":10,"dailySales":15},
-    {"id":"inv_5","sku":"SKU-006","name":"Milk (1L)","category":"Dairy","stock":40,"reorderPoint":15,"dailySales":10},
-    {"id":"inv_6","sku":"SKU-007","name":"Bread","category":"Bakery","stock":25,"reorderPoint":10,"dailySales":5},
-    {"id":"inv_7","sku":"SKU-008","name":"Chicken (1kg)","category":"Meat","stock":5,"reorderPoint":8,"dailySales":7},
-    {"id":"inv_8","sku":"SKU-009","name":"Tomato (1kg)","category":"Vegetables","stock":60,"reorderPoint":20,"dailySales":9},
-    {"id":"inv_9","sku":"SKU-010","name":"Oil (1L)","category":"Groceries","stock":35,"reorderPoint":10,"dailySales":3},
-    {"id":"inv_10","sku":"SKU-011","name":"Salt","category":"Groceries","stock":80,"reorderPoint":15,"dailySales":2}
-  ],
+  "_meta": {
+    "location": "Japan Garden City, Dhaka",
+    "currency": "BDT",
+    "updated": "2026-07-28"
+  },
   "settings": {
-    "aov": 800,
+    "aov": 820,
     "commission": 11,
     "deliveryFee": 30,
     "businessName": "JG Mart",
-    "location": "Japan Garden City, Mohammadpur, Dhaka"
-  }
+    "location": "Japan Garden City, Mohammadpur, Dhaka",
+    "whatsapp": "+8801870489448"
+  },
+  "orders": [
+    {"id": "JG-00011", "customerId": "cust_jgc_01", "customerName": "Rafiq Ahmed", "building": "Building 3", "items": 5, "total": 890, "status": "Delivered", "rider": "Hasan Ali", "date": "2026-07-27T04:30:00.000Z"},
+    {"id": "JG-00012", "customerId": "cust_jgc_02", "customerName": "Nusrat Jahan", "building": "Building 3", "items": 5, "total": 1240, "status": "Delivered", "rider": "Hasan Ali", "date": "2026-07-27T12:15:00.000Z"},
+    {"id": "JG-00013", "customerId": "cust_jgc_05", "customerName": "Tanvir Rahman", "building": "Building 18", "items": 4, "total": 670, "status": "Out for Delivery", "rider": "Jamal Uddin", "date": "2026-07-28T04:10:00.000Z"},
+    {"id": "JG-00014", "customerId": "cust_jgc_08", "customerName": "Laila Begum", "building": "Building 5", "items": 5, "total": 1580, "status": "Confirmed", "rider": "", "date": "2026-07-28T10:00:00.000Z"},
+    {"id": "JG-00015", "customerId": "cust_jgc_07", "customerName": "Mahmudul Hasan", "building": "Building 28", "items": 4, "total": 450, "status": "Pending", "rider": "", "date": "2026-07-28T11:20:00.000Z"},
+    {"id": "JG-00016", "customerId": "cust_jgc_04", "customerName": "Shamima Akter", "building": "Building 12", "items": 3, "total": 720, "status": "Delivered", "rider": "Jamal Uddin", "date": "2026-07-26T05:00:00.000Z"},
+    {"id": "JG-00017", "customerId": "cust_jgc_06", "customerName": "Farzana Islam", "building": "Building 22", "items": 6, "total": 1100, "status": "Delivered", "rider": "Rashed Khan", "date": "2026-07-26T13:40:00.000Z"},
+    {"id": "JG-00018", "customerId": "cust_jgc_03", "customerName": "Kabir Hasan", "building": "Building 7", "items": 2, "total": 380, "status": "Cancelled", "rider": "", "date": "2026-07-25T09:00:00.000Z"},
+    {"id": "JG-00019", "customerId": "cust_jgc_09", "customerName": "Sajid Khan", "building": "Building 15", "items": 4, "total": 940, "status": "Delivered", "rider": "Hasan Ali", "date": "2026-07-25T04:45:00.000Z"},
+    {"id": "JG-00020", "customerId": "cust_jgc_10", "customerName": "Parvin Sultana", "building": "Building 20", "items": 3, "total": 560, "status": "Processing", "rider": "Jamal Uddin", "date": "2026-07-28T05:30:00.000Z"}
+  ],
+  "customers": [
+    {"id": "cust_jgc_01", "name": "Rafiq Ahmed", "phone": "01712001001", "building": "Building 3", "totalOrders": 6, "totalSpend": 5200, "joined": "2026-06-01T00:00:00.000Z"},
+    {"id": "cust_jgc_02", "name": "Nusrat Jahan", "phone": "01712001002", "building": "Building 3", "totalOrders": 11, "totalSpend": 9800, "joined": "2026-05-12T00:00:00.000Z"},
+    {"id": "cust_jgc_03", "name": "Kabir Hasan", "phone": "01712001003", "building": "Building 7", "totalOrders": 3, "totalSpend": 2100, "joined": "2026-07-01T00:00:00.000Z"},
+    {"id": "cust_jgc_04", "name": "Shamima Akter", "phone": "01712001004", "building": "Building 12", "totalOrders": 8, "totalSpend": 7400, "joined": "2026-05-20T00:00:00.000Z"},
+    {"id": "cust_jgc_05", "name": "Tanvir Rahman", "phone": "01712001005", "building": "Building 18", "totalOrders": 4, "totalSpend": 3600, "joined": "2026-06-15T00:00:00.000Z"},
+    {"id": "cust_jgc_06", "name": "Farzana Islam", "phone": "01712001006", "building": "Building 22", "totalOrders": 9, "totalSpend": 8100, "joined": "2026-04-28T00:00:00.000Z"},
+    {"id": "cust_jgc_07", "name": "Mahmudul Hasan", "phone": "01712001007", "building": "Building 28", "totalOrders": 2, "totalSpend": 1500, "joined": "2026-07-10T00:00:00.000Z"},
+    {"id": "cust_jgc_08", "name": "Laila Begum", "phone": "01712001008", "building": "Building 5", "totalOrders": 14, "totalSpend": 12500, "joined": "2026-04-02T00:00:00.000Z"},
+    {"id": "cust_jgc_09", "name": "Sajid Khan", "phone": "01712001009", "building": "Building 15", "totalOrders": 5, "totalSpend": 4300, "joined": "2026-06-22T00:00:00.000Z"},
+    {"id": "cust_jgc_10", "name": "Parvin Sultana", "phone": "01712001010", "building": "Building 20", "totalOrders": 7, "totalSpend": 6100, "joined": "2026-05-05T00:00:00.000Z"}
+  ],
+  "partners": [
+    {"id": "part001", "name": "JGC Krishi Corner", "category": "vegetables", "ordersToday": 4, "onTime": 96, "score": 91},
+    {"id": "part002", "name": "City Grocery Traders", "category": "rice_dal", "ordersToday": 3, "onTime": 94, "score": 88},
+    {"id": "part003", "name": "Fresh Catch BD", "category": "fish", "ordersToday": 2, "onTime": 90, "score": 87},
+    {"id": "part004", "name": "Halal Meats JGC", "category": "meat", "ordersToday": 2, "onTime": 92, "score": 89},
+    {"id": "part005", "name": "Green Dairy", "category": "dairy_eggs", "ordersToday": 5, "onTime": 98, "score": 93},
+    {"id": "part006", "name": "Daily Needs BD", "category": "fmcg", "ordersToday": 1, "onTime": 85, "score": 80}
+  ],
+  "inventory": [
+    {"id": "inv_0", "sku": "p001", "name": "Chinigura Rice", "category": "rice_dal", "stock": 80, "reorderPoint": 20, "dailySales": 6},
+    {"id": "inv_1", "sku": "p008", "name": "Potato (Local)", "category": "vegetables", "stock": 150, "reorderPoint": 40, "dailySales": 18},
+    {"id": "inv_2", "sku": "p007", "name": "Red Onion", "category": "vegetables", "stock": 12, "reorderPoint": 25, "dailySales": 14},
+    {"id": "inv_3", "sku": "p021", "name": "Farm Eggs", "category": "dairy_eggs", "stock": 8, "reorderPoint": 15, "dailySales": 10},
+    {"id": "inv_4", "sku": "p017", "name": "Chicken (Broiler)", "category": "meat", "stock": 25, "reorderPoint": 10, "dailySales": 7},
+    {"id": "inv_5", "sku": "p013", "name": "Ruhi Fish", "category": "fish", "stock": 18, "reorderPoint": 8, "dailySales": 5},
+    {"id": "inv_6", "sku": "p020", "name": "Fresh Cow Milk", "category": "dairy_eggs", "stock": 40, "reorderPoint": 15, "dailySales": 12},
+    {"id": "inv_7", "sku": "p004", "name": "Mustard Oil", "category": "oil_spices", "stock": 30, "reorderPoint": 10, "dailySales": 3}
+  ]
 }
